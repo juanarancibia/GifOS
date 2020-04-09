@@ -38,7 +38,7 @@ function buscarClick() {
   document.getElementById("titulo-seccion-busqueda").innerHTML =
     "Resultado de la busqueda sobre " + strBusqueda;
   const found = fetch(
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
       strBusqueda +
       "&api_key=" +
       apiKey +
