@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/da1ac6e322.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/misgifos.css" />
+    <link rel="stylesheet" href="#" id="nigth" />
+    <title>GifOS</title>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="misgifos.js"></script>
+  </head>
+  <body onload="cargarMisGuifos(); comprobarTema()">
+    <header class="fondo">
+      <div>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </div>
+      <nav class="fondo">
+        <i class="fas fa-arrow-left flecha-volver" onclick="volverAtras()"></i>
+        <img
+          src="./assets/gifOF_logo.png"
+          alt="Logo gifOS"
+          id="logo-gif"
+          onclick="redirIndex()"
+        />
+        <ul class="menu">
+          <li>
+            <button class="button-nav" onclick="crearGifos()">
+              Crear Gifos
+            </button>
+          </li>
+          <li class="desplegar-submenu">
+            <button class="button-nav elegir-tema" id="elegirTema">
+              Elegir Tema
+            </button>
+            <button class="btn-desplegable button-nav elegir-tema">
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <ul class="submenu">
+              <li><button onclick="sailorDay()">Sailor Day</button></li>
+              <li><button onclick="sailorNight()">Sailor Night</button></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#misgifos"><u>M</u>is Gifos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="creacion">
+      <div class="crear-gifos" id="crear-pres">
+        <div class="header-crear">Crear Guifos</div>
+        <img src="/assets/window_img.png" alt="" class="img-crear" />
+        <div class="txt-crear">
+          <b>Aquí podrás crear tus propios guifos</b>
+        </div>
+        <div class="txt-crear">
+          Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu
+          cámara y obtén guifos personalizados. Los pasos para crear tu guifo
+          son: <br />
+          <br />
+          <b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de
+          uso)
+          <br />
+          <br />
+          <b>2)</b> Capturar tu momento guifo <br />
+          <br />
+          <b>3)</b> Revisar el momento <br />
+          <br />
+          <b>4)</b> Listo para subir y compartir! <br />
+          <br />
+          ¿Quieres comenzar a crear tu <b>guifo</b> ahora?
+        </div>
+        <button class="btn-crear btn-cancelar" onclick="cancelar()">
+          Cancelar
+        </button>
+        <button class="btn-crear btn-comenzar" onclick="comenzar()">
+          Comenzar
+        </button>
+      </div>
+
+      <div class="crear-gifos" id="crear-captura">
+        <div class="header-crear" id="titulo-creacion-gif">
+          Un chequeo antes de empezar
+          <button class="btn-cancelar-header">X</button>
+        </div>
+        <video src="#" class="video-gif" id="video-gif"></video>
+
+        <div class="btns-captura">
+          <button class="btn-camara" onclick="capturar(); startTimer()">
+            <i class="fas fa-camera"></i>
+          </button>
+          <button class="btn-capturar" onclick="capturar(); startTimer()">
+            Capturar
+          </button>
+        </div>
+
+        <div class="btns-stop">
+          <div class="tiempo">
+            <span id="mins">00:</span>
+            <span id="seconds">00</span>
+          </div>
+          <div>
+            <button
+              class="btn-recording"
+              onclick="terminaCaptura(); clearTimeout(timex); finalizarTimer()"
+            >
+              <i class="far fa-dot-circle"></i>
+            </button>
+            <button
+              class="btn-listo"
+              onclick="terminaCaptura(); clearTimeout(timex); finalizarTimer()"
+            >
+              Listo
+            </button>
+          </div>
+        </div>
+
+        <div class="btns-poscaptura">
+          <div class="tiempo">
+            <span id="mins-final">00:</span>
+            <span id="seconds-final">00</span>
+          </div>
+          <div class="cont-preview">
+            <div class="contenedor-play" onclick="reproducirGif()">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="contenedor-reproduccion">
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+              <div class="carga-rep"></div>
+            </div>
+          </div>
+          <div>
+            <button
+              class="repetir-capt"
+              onclick="repetirCaptura(); resetTimer()"
+            >
+              Repetir Captura
+            </button>
+            <button class="subir-guifo" onclick="subirGuifo()">
+              Subir Guifo
+            </button>
+          </div>
+        </div>
+
+        <div class="en-subida">
+          <div class="contenedor-subida">
+            <img src="/assets/globe_img.png" alt="" class="img-subiendo" />
+            <span class="txt-subiendo">Estamos subiendo tu guifo...</span>
+            <div class="barra-carga">
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+              <div class="carga"></div>
+            </div>
+            <span class="txt-tiemporestante"
+              >Tiempo restante: <del>30 años</del> algunos minutos</span
+            >
+          </div>
+          <button class="btn-cancelar-subida" onclick="cancelarSubida()">
+            Cancelar
+          </button>
+        </div>
+
+        <div class="subido">
+          <div class="contenedor-preview">
+            <img src="#" alt="gif-preview" class="preview-gif" />
+            <div class="contenedor-exito">
+              <span class="span-subido">Guifo creado con éxito</span>
+              <button
+                class="btn-exito"
+                onclick="copiarEnlace()"
+                id="copiar-enlace"
+              >
+                Copiar Enlace Guifo
+              </button>
+              <button class="btn-exito" onclick="descargarGuifo()">
+                Descargar Guifo
+              </button>
+            </div>
+          </div>
+          <button class="btn-listo-final" onclick="cancelar()">Listo</button>
+        </div>
+      </div>
+      <a href="#" style="display: none;" download="miGif.gif" id="descarga"></a>
+    </section>
+
+    <section class="seccion" id="misgifos">
+      <div class="titulo-seccion">Mis GifOS</div>
+
+      <div class="contenedor-grid"></div>
+    </section>
+  </body>
+</html>

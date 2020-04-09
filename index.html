@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="#" id="nigth" />
+    <script
+      src="https://kit.fontawesome.com/da1ac6e322.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/index.js"></script>
+    <title>GifOS</title>
+  </head>
+  <body onload="buscarTend(); sugIniciador(); comprobarTema()">
+    <header class="fondo">
+      <div>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </div>
+      <nav class="fondo">
+        <img
+          src="./assets/gifOF_logo.png"
+          alt="Logo gifOS"
+          id="logo-gif"
+          onclick="redirIndex()"
+        />
+        <ul class="menu">
+          <li>
+            <button class="button-nav" onclick="redirCrear()">
+              Crear Gifos
+            </button>
+          </li>
+          <li class="desplegar-submenu">
+            <button class="button-nav elegir-tema" id="elegirTema">
+              Elegir Tema
+            </button>
+
+            <button class="btn-desplegable button-nav elegir-tema">
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <ul class="submenu">
+              <li><button onclick="sailorDay()">Sailor Day</button></li>
+              <li><button onclick="sailorNight()">Sailor Night</button></li>
+            </ul>
+          </li>
+          <li>
+            <a href="misGifOS.html#misgifos"><u>M</u>is Gifos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="busqueda">
+      <div class="cabecera-busqueda">
+        <span>Buscar </span>
+      </div>
+      <input
+        type="text"
+        name="busquedagif"
+        id="busqueda-gif"
+        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+        oninput="cambiarBuscar()"
+      />
+      <button onclick="buscarClick()" id="btn-buscar" class="btn-busc">
+        <canvas class="text-btn-busc"></canvas>
+        Buscar
+      </button>
+      <div class="op-busq">
+        <div class="item-op-busq" onclick="similarIniciador()">
+          Resultado de búsqueda sugerido
+        </div>
+        <div class="item-op-busq" onclick="similarIniciador()">
+          Un resultado similar de búsqueda
+        </div>
+        <div class="item-op-busq" onclick="similarIniciador()">Y otro más</div>
+      </div>
+    </section>
+
+    <section id="seccion-busqueda">
+      <div class="titulo-seccion" id="titulo-seccion-busqueda">
+        Resultados de la busqueda
+      </div>
+      <div class="contenedor-grid">
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-busqueda"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-busqueda" class="gif-busqueda" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sugerencias">
+      <div class="titulo-seccion">Hoy te sugerimos:</div>
+      <div class="contenedor-grid">
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-sugerencia"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-sugerencia" class="gif-sugerencia" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-sugerencia"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-sugerencia" class="gif-sugerencia" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-sugerencia"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-sugerencia" class="gif-sugerencia" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+
+        <div class="contenedor-gif">
+          <div class="header-gif">
+            <span class="titulo-sugerencia"> </span>
+            <button class="btn-cancelar">x</button>
+          </div>
+          <div class="contenedor-btn">
+            <img src="#" alt="gif-sugerencia" class="gif-sugerencia" />
+            <button onclick="verMas(this)">Ver más...</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tendencias">
+      <div class="titulo-seccion">Tendencias:</div>
+      <div class="contenedor-grid">
+        <div class="contenedor-tendencia">
+          <img src="#" alt="gif-tendencia" class="gif-tendencia" />
+          <div class="titulo-tendencia"></div>
+        </div>
+
+        <div class="contenedor-tendencia">
+          <img src="#" alt="gif-tendencia" class="gif-tendencia" />
+          <div class="titulo-tendencia"></div>
+        </div>
+
+        <div class="contenedor-tendencia">
+          <img src="#" alt="gif-tendencia" class="gif-tendencia" />
+          <div class="titulo-tendencia"></div>
+        </div>
+
+        <div class="contenedor-tendencia">
+          <img src="#" alt="gif-tendencia" class="gif-tendencia" />
+          <div class="titulo-tendencia"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
