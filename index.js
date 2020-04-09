@@ -74,7 +74,7 @@ function gifsBusq(data) {
 
 function buscarTend() {
   const trending = fetch(
-    "http://api.giphy.com/v1/gifs/trending?api_key=" + apiKey + "&limit=4"
+    "https://api.giphy.com/v1/gifs/trending?api_key=" + apiKey + "&limit=4"
   )
     .then((data) => {
       return data.json();
@@ -95,7 +95,7 @@ function gifsTend(data) {
 
 function buscarSug(arr) {
   const sugerencia = fetch(
-    "http://api.giphy.com/v1/gifs/random?api_key=" + apiKey
+    "https://api.giphy.com/v1/gifs/random?api_key=" + apiKey
   )
     .then((data) => {
       return data.json();
@@ -133,7 +133,7 @@ function similarIniciador() {
 }
 
 function buscarSimilar(arr) {
-  const similar = fetch("http://api.giphy.com/v1/gifs/random?api_key=" + apiKey)
+  const similar = fetch("https://api.giphy.com/v1/gifs/random?api_key=" + apiKey)
     .then((data) => {
       return data.json();
     })
