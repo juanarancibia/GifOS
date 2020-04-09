@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  div {
+    text-indent: 5px;
+    background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+    box-shadow: 0 1px 0 0;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+  }
+  nav {
+    display: flex;
+    margin-top: 4%;
+    margin-left: 7%;
+    margin-right: 7%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    ul {
+      list-style: none;
+    }
+    img {
+      margin-right: auto;
+    }
+    .button-nav {
+      background: #f7c9f3;
+      border: 1px solid #110038;
+      box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+      font-family: "Chakra Petch";
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 18px;
+      padding: 10px;
+    }
+    .button-nav:hover {
+      background: #e6bbe2 100%;
+    }
+    a {
+      font-family: "Chakra Petch";
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0;
+      line-height: 18px;
+    }
+  }
+}
+
+#elegirTema {
+  margin-right: -3px;
+}
+
+.menu > li {
+  display: inline-block;
+}
+
+.submenu {
+  position: absolute;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  display: none;
+}
+
+.submenu > li button {
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-left: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 115px;
+  height: 35px;
+}
+
+.btn-desplegable {
+  margin-left: -1px;
+}
+
+.desplegar-submenu:hover .submenu {
+  display: block;
+}
+
+#busqueda {
+  margin-top: 3%;
+  margin-left: 7%;
+  margin-right: 7%;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  div {
+    span {
+      margin-left: 0.5%;
+    }
+  }
+  input {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background: #ffffff;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+    width: 90%;
+    height: 40px;
+    margin-left: 1%;
+    text-indent: 7px;
+  }
+}
+
+.cabecera-busqueda {
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  font-family: "Chakra Petch";
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0;
+}
+
+#seccion-busqueda {
+  margin-top: 4%;
+  margin-left: 7%;
+  margin-right: 7%;
+  display: none;
+}
+
+#sugerencias {
+  margin-top: 4%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.grilla-gif {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-cancelar {
+  width: 14px;
+  line-height: 8px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: 3px;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(130, 123, 130, 1);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(130, 123, 130, 1);
+  box-shadow: 0px 0px 0px 1px rgba(130, 123, 130, 1);
+}
+
+.header-gif {
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-indent: 10px;
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  width: 280px;
+}
+
+.contenedor-gif {
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  width: 284px;
+  height: 302px;
+}
+
+.contenedor-btn {
+  position: relative;
+  width: 280px;
+}
+
+/* Make the image responsive */
+.contenedor-btn img {
+  width: 280px;
+  height: 280px;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.contenedor-btn button {
+  position: absolute;
+  top: 88%;
+  right: 70%;
+  padding: 3px 5px;
+  background: #4180f6;
+  border: 1px solid #4c2f99;
+  box-shadow: inset -2px -2px 0 0 #284f99, inset 0px 0px 0 0 #ffffff;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+}
+
+.gif-sugerencia {
+  width: 280px;
+  height: 280px;
+}
+
+.gif-busqueda {
+  width: 280px;
+  height: 280px;
+}
+.titulo-seccion {
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  background: #fffafe;
+  border: 1px solid #e6bbe2;
+  box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-indent: 10px;
+  margin-bottom: 2%;
+}
+
+#tendencias {
+  margin-top: 4%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.gif-tendencia {
+  height: 280px;
+  width: 280px;
+}
+
+.contenedor-tendencia {
+  position: relative;
+  height: 280px;
+  width: 280px;
+
+  div {
+    background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+    position: absolute;
+    bottom: 0%;
+    left: 0.3%;
+    width: 100%;
+    display: none;
+    color: white;
+  }
+}
+
+.gif-tendencia:hover {
+  border: 1px solid #110038;
+}
+.contenedor-tendencia:hover div {
+  display: block;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.btn-busc {
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #b4b4b4;
+  letter-spacing: 0;
+  line-height: 18px;
+  background: #e6e6e6;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  display: inline-block;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn-activo {
+  background: #f7c9f3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+#busqueda .text-btn-busc {
+  background-image: url(/assets/lupa_inactive.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+#busqueda .text-btn-busc-activo {
+  background-image: url(/assets/lupa.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.op-busq {
+  display: none;
+  padding-top: 17px;
+  padding-bottom: 4px;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #8f8f8f, inset 2px 2px 0 0 #ffffff;
+}
+
+.item-op-busq {
+  background: #cccccc;
+  opacity: 0.6;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  border: 1px solid #110038;
+  margin-bottom: 13px;
+  width: 90%;
+  margin-left: 1%;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-indent: 7px;
+}
+
+.item-op-busq:hover {
+  opacity: 1;
+}

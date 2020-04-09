@@ -1,0 +1,96 @@
+body {
+  background-color: #110038;
+}
+
+header div {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ee3efe), to(#2e32fb));
+  background-image: linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%);
+  -webkit-box-shadow: 0 1px 0 0;
+          box-shadow: 0 1px 0 0;
+}
+
+header nav .button-nav {
+  color: #ffffff;
+  background: #ee3efe;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+}
+
+header nav .button-nav:hover {
+  border: 1px solid #110038;
+}
+
+header nav ul li a {
+  color: #ffffff;
+}
+
+#busqueda {
+  background: #b4b4b4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8f8f8f, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #8f8f8f, inset 2px 2px 0 0 #ffffff;
+}
+
+#busqueda button {
+  color: #8f8f8f;
+  background: #b4b4b4;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+}
+
+.header-gif {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ee3efe), to(#2e32fb));
+  background-image: linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%);
+}
+
+.contenedor-gif {
+  background: #b4b4b4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #5c5c5c, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #5c5c5c, inset 2px 2px 0 0 #ffffff;
+}
+
+.contenedor-btn button {
+  background: #2e32fb;
+  border: 1px solid #4c2f99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #2124b3, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #2124b3, inset 2px 2px 0 0 #ffffff;
+}
+
+.titulo-seccion {
+  background: #fffafe;
+  border: 1px solid #2e32fb;
+  -webkit-box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #110038;
+}
+
+.contenedor-tendencia div {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ee3efe), to(#2e32fb));
+  background-image: linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%);
+}
+
+.op-busq {
+  background: #b4b4b4 100%;
+}
+
+#busqueda .btn-activo {
+  background: #ee3efe 100%;
+  color: #ffffff;
+}
+
+#busqueda .text-btn-busc {
+  background-image: url(/assets/lupa.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+#busqueda .text-btn-busc-activo {
+  background-image: url(/assets/lupa_light.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+}
+/*# sourceMappingURL=nigth.css.map */
