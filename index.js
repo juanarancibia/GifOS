@@ -164,14 +164,17 @@ function gifsSimilares(arr) {
   } else {
     var div = document.getElementsByClassName("op-busq");
     div[0].style.display = "none";
-    var imgs = document.getElementsByClassName("gif-busqueda");
-    var titulos = document.getElementsByClassName("titulo-busqueda");
-    for (i = 0; i < imgs.length; i++) {
-      console.log(arr[i]);
+    var contenedor = document.getElementById("contenedor-grid-busq");
+    contenedor.innerHTML = "";
+    for (i = 0; i < arr.length; i++) {
       var gif = arr[i].data.images.original.url;
-      imgs[i].src = gif;
-      var titulo = arr[i].data.title;
-      titulos[i].innerHTML = titulo.slice(0, 30);
+      var titulo = arr[i].data.title.slice(0, 30);
+      contenedor.innerHTML +=
+        "<div class='contenedor-gif'><div class='header-gif'><span class='titulo-busqueda'>" +
+        titulo +
+        " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
+        gif +
+        " alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
     }
     document.getElementById("seccion-busqueda").style.display = "block";
     document.getElementsByClassName("text-btn-busc-activo").className =
