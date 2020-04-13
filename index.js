@@ -65,7 +65,7 @@ function gifsBusq(arr) {
         titulo +
         " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
         gif +
-        " alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
+        "' alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
     }
     document.getElementById("seccion-busqueda").style.display = "block";
     document.getElementsByClassName("text-btn-busc-activo").className =
@@ -130,7 +130,7 @@ function gifsSug(arr) {
       titulo +
       " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
       gif +
-      " alt='gif-sugerencia' class='gif-sugerencia' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
+      "' alt='gif-sugerencia' class='gif-sugerencia' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
   }
 }
 
@@ -174,7 +174,7 @@ function gifsSimilares(arr) {
         titulo +
         " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
         gif +
-        " alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
+        "' alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
     }
     document.getElementById("seccion-busqueda").style.display = "block";
     document.getElementsByClassName("text-btn-busc-activo").className =
