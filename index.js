@@ -41,8 +41,7 @@ function buscarClick() {
     "https://api.giphy.com/v1/gifs/search?q=" +
       strBusqueda +
       "&api_key=" +
-      apiKey +
-      "&limit=8"
+      apiKey
   )
     .then((data) => {
       return data.json();
@@ -50,25 +49,30 @@ function buscarClick() {
     .then((data) => gifsBusq(data));
 }
 
-function gifsBusq(data) {
-  if (data.data.length == 0) {
+function gifsBusq(arr) {
+  if (arr.data.length == 0) {
     alert("No se encontraron resultados.");
   } else {
     var div = document.getElementsByClassName("op-busq");
     div[0].style.display = "none";
-    var imgs = document.getElementsByClassName("gif-busqueda");
-    var titulos = document.getElementsByClassName("titulo-busqueda");
-    for (i = 0; i < imgs.length; i++) {
-      var gif = data.data[i].images.original.url;
-      imgs[i].src = gif;
-      var titulo = data.data[i].title;
-      titulos[i].innerHTML = titulo.slice(0, 30);
+    var contenedor = document.getElementById("contenedor-grid-busq");
+    contenedor.innerHTML = "";
+    for (i = 0; i < arr.data.length; i++) {
+      var gif = arr.data[i].images.original.url;
+      var titulo = arr.data[i].title.slice(0, 30);
+      contenedor.innerHTML +=
+        "<div class='contenedor-gif'><div class='header-gif'><span class='titulo-busqueda'>" +
+        titulo +
+        " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
+        gif +
+        " alt='gif-busqueda' class='gif-busqueda' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
     }
     document.getElementById("seccion-busqueda").style.display = "block";
     document.getElementsByClassName("text-btn-busc-activo").className =
       "text-btn-busc";
     document.getElementById("busqueda-gif").value = "";
     document.getElementById("btn-buscar").classList.remove("btn-activo");
+    console.log(contenedor);
   }
 }
 
@@ -116,13 +120,17 @@ function sugIniciador() {
 }
 
 function gifsSug(arr) {
-  var imgs = document.getElementsByClassName("gif-sugerencia");
-  var titulos = document.getElementsByClassName("titulo-sugerencia");
-  for (i = 0; i < imgs.length; i++) {
+  var contenedor = document.getElementById("contenedor-grid-sug");
+  contenedor.innerHTML = "";
+  for (i = 0; i < arr.length; i++) {
     var gif = arr[i].data.images.original.url;
-    imgs[i].src = gif;
-    var titulo = arr[i].data.title;
-    titulos[i].innerHTML = titulo.slice(0, 30);
+    var titulo = arr[i].data.title.slice(0, 30);
+    contenedor.innerHTML +=
+      "<div class='contenedor-gif'><div class='header-gif'><span class='titulo-sugerencia'>" +
+      titulo +
+      " </span><button class='btn-cancelar'>x</button></div><div class='contenedor-btn'><img src='" +
+      gif +
+      " alt='gif-sugerencia' class='gif-sugerencia' />        <button onclick='verMas(this)'>Ver más...</button>      </div>   </div>";
   }
 }
 
@@ -133,7 +141,9 @@ function similarIniciador() {
 }
 
 function buscarSimilar(arr) {
-  const similar = fetch("https://api.giphy.com/v1/gifs/random?api_key=" + apiKey)
+  const similar = fetch(
+    "https://api.giphy.com/v1/gifs/random?api_key=" + apiKey
+  )
     .then((data) => {
       return data.json();
     })
